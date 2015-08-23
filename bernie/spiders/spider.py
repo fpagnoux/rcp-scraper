@@ -3,7 +3,15 @@ from bernie.items import TableItem
 
 class spider(scrapy.Spider):
     name = "bernieSpider"
-    start_urls = ["file:///home/fpagnoux/erika/national.html"]
+    start_urls = []
+
+    def __init__(self, url):
+        self.url = url
+
+    def start_requests(self):
+        return [scrapy.FormRequest(self.url,
+                               callback=self.parse)]
+
 
     def parse(self, response):
         table = response.css('.data').pop()
