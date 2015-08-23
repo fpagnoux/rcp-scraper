@@ -23,6 +23,3 @@ class spider(scrapy.Spider):
             items.append(item)
 
         return items
-
-
-
