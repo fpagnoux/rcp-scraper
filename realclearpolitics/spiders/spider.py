@@ -1,8 +1,8 @@
 import scrapy
-from bernie.items import TableItem
+from realclearpolitics.items import TableItem
 
 class spider(scrapy.Spider):
-    name = "bernieSpider"
+    name = "realclearpoliticsSpider"
     start_urls = []
 
     def __init__(self, url):

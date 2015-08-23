@@ -13,5 +13,5 @@ else:
 	else:
 		output = sys.argv[2]
 
-	os.system("scrapy crawl bernieSpider -a url="+url+" -o "+output)
+	os.system("scrapy crawl realclearpoliticsSpider -a url="+url+" -o "+output)
 
