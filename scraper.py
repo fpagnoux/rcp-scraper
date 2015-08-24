@@ -14,6 +14,7 @@ else:
 		output = sys.argv[2]
 		if not output.endswith(".csv"):
 			output = output + ".csv"
-
+	if os.path.isfile(output):
+		os.remove(output)
 	os.system("scrapy crawl realclearpoliticsSpider -a url="+url+" -o "+output)
 
